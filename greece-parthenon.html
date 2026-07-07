@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리스 탐험</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            /* 지중해 느낌의 시원하고 밝은 배경색 */
+            background-color: #eff6ff; 
+        }
+        .font-en { font-family: 'Poppins', sans-serif; }
+        
+        /* 통통 튀는 애니메이션 효과 */
+        @keyframes bounce-in {
+            0% { transform: scale(0.8); opacity: 0; }
+            60% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-bounce-in {
+            animation: bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 text-slate-800">
+
+    <!-- 모바일 화면 크기에 맞춘 컨테이너 -->
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden animate-bounce-in mt-4 border-4 border-blue-200 relative">
+        
+        <!-- 상단 장식 (그리스의 파란색 테마) -->
+        <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-blue-400 to-cyan-500"></div>
+
+        <div class="p-6 text-center">
+            <h1 class="text-sm font-bold text-blue-500 mb-2 tracking-widest">MISSION UNLOCKED!</h1>
+            
+            <!-- 국기 이미지 -->
+            <div class="w-full h-40 rounded-xl overflow-hidden shadow-md mb-4 border border-slate-100 flex items-center justify-center bg-slate-50">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg" alt="그리스 국기" class="w-full h-full object-cover">
+            </div>
+
+            <h2 class="text-4xl font-black text-slate-800 mb-1">그리스</h2>
+            <h3 class="text-xl font-en font-bold text-slate-400 mb-4">Greece</h3>
+
+            <!-- 대륙 태그 -->
+            <div class="inline-block bg-cyan-100 text-cyan-700 font-bold px-4 py-1.5 rounded-full text-sm mb-6 flex items-center justify-center gap-2 mx-auto w-fit">
+                🌍 유럽 대륙 (Europe)
+            </div>
+
+            <!-- 초등학생 눈높이 설명 -->
+            <div class="bg-blue-50 rounded-2xl p-4 text-left mb-6 shadow-inner">
+                <p class="text-slate-700 leading-relaxed font-medium mb-3">
+                    그리스는 제우스, 아테나 같은 <strong class="text-blue-600">올림포스 신들의 이야기</strong>와 전 세계인의 축제인 <strong>올림픽</strong>이 처음 시작된 나라예요. 
+                    아름다운 지중해 바다와 언덕 꼭대기에 세워진 멋진 <strong class="text-blue-600">파르테논 신전</strong>이 아주 유명하답니다!
+                </p>
+                
+                <!-- 황금비 특별 설명 섹션 -->
+                <div class="bg-white rounded-xl p-4 border border-blue-200 mt-4 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-400"></div>
+                    <h4 class="text-sm font-black text-blue-600 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        수학 탐정 미션: 파르테논 신전의 비밀
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        옛날 그리스 사람들은 신이 머무는 집을 세상에서 가장 완벽하게 짓고 싶어 했어요. 그래서 파르테논 신전을 정면에서 바라봤을 때 가로와 세로의 비율이 가장 아름답다는 <strong>'황금비(1:1.618)'</strong>에 딱 맞게 지었답니다. 수학의 힘, 정말 대단하죠?
+                    </p>
+                </div>
+            </div>
+
+            <!-- 파르테논 신전 사진 -->
+            <div class="w-full rounded-2xl overflow-hidden shadow-md border border-slate-200 mb-6 bg-slate-100 group relative">
+
+                <img 
+                    src="https://i.namu.wiki/i/rToBQ9C2YkJFmjaskDpgLcVGM9WnxWY8XAPQvA86i5SWAJnoO21x7J__MICgGrLOp_mgrgI8jGk0ePZ2kjrbv3f__CLosclxFwQIu8hX0IHsAso1OeGyl4sXDA6PZ7DzTpGDTWP-WHhfZSox1kWq4w.webp" 
+                    alt="그리스 아테네 파르테논 신전" 
+                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=파르테논+신전+사진'">
+            </div>
+
+            <!-- 영어 미션 힌트 -->
+            <div class="w-full bg-slate-800 rounded-2xl p-4 text-center">
+                <p class="text-xs font-bold text-blue-300 mb-1">🗣️ 영어 미션 대사</p>
+                <p class="text-white font-en font-bold text-lg">"I'm from Greece!"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mt-6 text-slate-400 font-bold text-sm flex items-center gap-1 hover:text-slate-600 transition-colors">
+        ▲ 위로 가기
+    </button>
+
+</body>
+</html>

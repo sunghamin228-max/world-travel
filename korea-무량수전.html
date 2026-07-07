@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 탐험</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            /* 한지나 전통 건축 느낌의 따뜻한 아이보리 배경색 */
+            background-color: #fefcf5; 
+        }
+        .font-en { font-family: 'Poppins', sans-serif; }
+        
+        /* 통통 튀는 애니메이션 효과 */
+        @keyframes bounce-in {
+            0% { transform: scale(0.8); opacity: 0; }
+            60% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-bounce-in {
+            animation: bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 text-slate-800">
+
+    <!-- 모바일 화면 크기에 맞춘 컨테이너 -->
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden animate-bounce-in mt-4 border-4 border-red-200 relative">
+        
+        <!-- 상단 장식 (전통 단청/태극무늬 느낌의 붉은 계열 테마) -->
+        <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-red-500 to-orange-500"></div>
+
+        <div class="p-6 text-center">
+            <h1 class="text-sm font-bold text-red-500 mb-2 tracking-widest">MISSION UNLOCKED!</h1>
+            
+            <!-- 국기 이미지 -->
+            <div class="w-full h-40 rounded-xl overflow-hidden shadow-md mb-4 border border-slate-100 flex items-center justify-center bg-slate-50">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="대한민국 국기" class="w-full h-full object-cover">
+            </div>
+
+            <h2 class="text-4xl font-black text-slate-800 mb-1">대한민국</h2>
+            <h3 class="text-xl font-en font-bold text-slate-400 mb-4">South Korea</h3>
+
+            <!-- 대륙 태그 -->
+            <div class="inline-block bg-red-100 text-red-700 font-bold px-4 py-1.5 rounded-full text-sm mb-6 flex items-center justify-center gap-2 mx-auto w-fit">
+                🌍 아시아 대륙 (Asia)
+            </div>
+
+            <!-- 초등학생 눈높이 설명 -->
+            <div class="bg-red-50 rounded-2xl p-4 text-left mb-6 shadow-inner">
+                <p class="text-slate-700 leading-relaxed font-medium mb-3">
+                    우리나라 영주 부석사에 있는 <strong class="text-red-600">무량수전</strong>은 세계에서 가장 아름다운 목조 건축물 중 하나예요. 
+                    기둥 가운데가 통통한 <strong class="text-red-600">배흘림기둥</strong> 덕분에 건물이 훨씬 안정적이고 편안하게 보인답니다!
+                </p>
+                
+                <!-- 수학 탐정 미션 (루트 2 비율) -->
+                <div class="bg-white rounded-xl p-4 border border-red-200 mt-4 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-red-400"></div>
+                    <h4 class="text-sm font-black text-red-600 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        수학 탐정 미션: 무량수전의 비밀
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        무량수전 건물 전체의 가로와 세로 길이를 재어보면, 우리에게 아주 친숙한 <strong>'1:1.414 '</strong>라는 비율이 숨어 있어요. 우리가 매일 쓰는 A4 용지도 바로 이 비율이랍니다! 옛날 우리 조상님들의 수학 실력, 정말 대단하죠?
+                    </p>
+                </div>
+            </div>
+
+            <!-- 무량수전 사진 -->
+            <div class="w-full rounded-2xl overflow-hidden shadow-md border border-slate-200 mb-6 bg-slate-100 group relative">
+                <!-- 위키미디어 공용의 안정적인 부석사 무량수전 고화질 사진 -->
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Muryangsujeon2.jpg" 
+                    alt="부석사 무량수전" 
+                    class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+                    onerror="this.src='https://placehold.co/600x400/e2e8f0/475569?text=무량수전+사진'">
+            </div>
+
+       
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mt-6 text-slate-400 font-bold text-sm flex items-center gap-1 hover:text-slate-600 transition-colors">
+        ▲ 위로 가기
+    </button>
+
+</body>
+</html>
