@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이집트 탐험</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            /* 사막 느낌의 따뜻한 배경색 */
+            background-color: #fffbeb; 
+        }
+        .font-en { font-family: 'Poppins', sans-serif; }
+        
+        /* 통통 튀는 애니메이션 효과 */
+        @keyframes bounce-in {
+            0% { transform: scale(0.8); opacity: 0; }
+            60% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-bounce-in {
+            animation: bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 text-slate-800">
+
+    <!-- 모바일 화면 크기에 맞춘 컨테이너 -->
+    <div class="w-full max-w-md bg-white rounded-3xl shadow-xl overflow-hidden animate-bounce-in mt-4 border-4 border-amber-200 relative">
+        
+        <!-- 상단 장식 -->
+        <div class="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-amber-400 to-orange-500"></div>
+
+        <div class="p-6 text-center">
+            <h1 class="text-sm font-bold text-amber-500 mb-2 tracking-widest">MISSION UNLOCKED!</h1>
+            
+            <!-- 국기 이미지 (위키미디어 공용 이미지 사용) -->
+            <div class="w-full h-40 rounded-xl overflow-hidden shadow-md mb-4 border border-slate-100 flex items-center justify-center bg-slate-50">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" alt="이집트 국기" class="w-full h-full object-cover">
+            </div>
+
+            <h2 class="text-4xl font-black text-slate-800 mb-1">이집트</h2>
+            <h3 class="text-xl font-en font-bold text-slate-400 mb-4">Egypt</h3>
+
+            <!-- 대륙 태그 -->
+            <div class="inline-block bg-orange-100 text-orange-700 font-bold px-4 py-1.5 rounded-full text-sm mb-6 flex items-center justify-center gap-2 mx-auto w-fit">
+                🌍 아프리카 대륙 (Africa)
+            </div>
+
+            <!-- 초등학생 눈높이 설명 -->
+            <div class="bg-amber-50 rounded-2xl p-4 text-left mb-6 shadow-inner">
+                <p class="text-slate-700 leading-relaxed font-medium mb-3">
+                    이집트는 세계에서 가장 긴 강인 <strong class="text-amber-600">나일강</strong>이 흐르는 나라예요. 
+                    옛날 파라오 왕들의 무덤인 거대한 <strong class="text-amber-600">피라미드</strong>와 
+                    사자 몸에 사람 얼굴을 한 <strong class="text-amber-600">스핑크스</strong>가 아주 유명하답니다!
+                </p>
+                
+                <!-- 황금비 특별 설명 섹션 추가 -->
+                <div class="bg-white rounded-xl p-4 border border-amber-200 mt-4 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-amber-400"></div>
+                    <h4 class="text-sm font-black text-amber-600 mb-2 flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        수학 탐정 미션: 피라미드의 비밀
+                    </h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        엄청나게 거대한 쿠푸왕의 피라미드는 기원전에 만들어졌어요. 그런데 놀랍게도 피라미드의 밑변과 높이를 계산해보면, 우리가 가장 아름답다고 느끼는 <strong>'황금비(1:1.618)'</strong>가 정확하게 숨어 있답니다! 우연일까요, 아니면 천재 수학자가 만든 걸까요?
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="w-full rounded-2xl overflow-hidden shadow-md border border-slate-200 mb-6 bg-slate-100 group">
+                <img 
+                    src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?q=80&w=1000&auto=format&fit=crop" 
+                    alt="이집트 피라미드 전경" 
+                    class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+
+          </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="mt-6 text-slate-400 font-bold text-sm flex items-center gap-1 hover:text-slate-600 transition-colors">
+        ▲ 위로 가기
+    </button>
+
+</body>
+</html>
